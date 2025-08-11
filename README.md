@@ -1,26 +1,52 @@
-# Laboratorio de Hacking Ético: Simulación de Ataque a Windows 11
+# Laboratorio de Hacking Ético: Análisis de Máquina Windows 11
 
-## Objetivo
-El objetivo de este laboratorio fue simular un ciclo completo de ataque ético, desde el reconocimiento hasta la obtención de persistencia, en un entorno de laboratorio controlado.
+## 📜 Resumen del Proyecto
 
-## Herramientas Utilizadas
-- **Kali Linux** (como máquina atacante)
-- **Windows 11** (como máquina objetivo)
-- **VMware Workstation**
-- **Nmap** (para escaneo de puertos)
-- **Wireshark** (para análisis de tráfico)
-- **Metasploit Framework** (para explotación y persistencia)
+Este repositorio documenta un laboratorio de hacking ético realizado en un entorno controlado con el fin de aprender el ciclo de vida de un ciberataque. El proyecto abarca desde el reconocimiento inicial hasta la obtención de persistencia, utilizando herramientas estándar de la industria.
 
-## Resumen del Proceso
-1.  **Escaneo de Puertos:** Utilicé Nmap para escanear la máquina Windows, identificando puertos abiertos como 135, 139 y 445 (SMB).
-2.  **Detección de Tráfico:** Analicé el tráfico en Wireshark para visualizar los paquetes del escaneo, demostrando que los ataques de red no son invisibles.
-3.  **Explotación:** Usé un payload de Metasploit (a través de un ataque del lado del cliente) para obtener una sesión Meterpreter en la máquina Windows.
-4.  **Persistencia:** Instalé una puerta trasera (backdoor) en Windows para mantener el acceso incluso después de reiniciar el sistema.
-5.  **Defensa:** Demostré cómo el firewall y el antivirus de Windows bloquearon el intento de una nueva conexión, validando la importancia de las defensas.
+## 🛠️ Herramientas y Tecnologías
 
-## Habilidades Demostradas
-- Comprensión de la metodología de un ataque.
-- Uso de herramientas de hacking ético.
-- Análisis de tráfico de red.
-- Configuración de entornos de laboratorio.
-- Entendimiento de la persistencia y la defensa.
+- **Máquina Atacante:** Kali Linux (máquina virtual)
+- **Máquina Objetivo:** Windows 11 (máquina virtual)
+- **Plataforma:** VMware Workstation
+- **Herramientas de Seguridad:**
+    - **Nmap:** Escaneo de puertos y reconocimiento.
+    - **Wireshark:** Análisis y detección de tráfico de red.
+    - **Metasploit Framework:** Explotación y persistencia.
+    - **Msfvenom:** Generación de payloads maliciosos.
+    - **Python:** Scripting para automatización.
+
+## 🗺️ Metodología del Ataque
+
+El laboratorio siguió una metodología de ataque estándar para simular un escenario real:
+
+1.  **Escaneo y Reconocimiento:** Se utilizó `Nmap` para identificar puertos abiertos en la máquina objetivo y determinar los servicios activos.
+
+    ![Escaneo Nmap](screenshots/nmap_scan.png)
+
+2.  **Detección de Tráfico:** Se analizó el tráfico con `Wireshark` para observar los paquetes del escaneo, demostrando que esta actividad de red es detectable.
+
+    ![Detección Wireshark](screenshots/wireshark_capture.png)
+
+3.  **Explotación Inicial:** A través de un ataque del lado del cliente, se ejecutó un payload malicioso para obtener una sesión `meterpreter` en la máquina Windows.
+
+    ![Sesión Meterpreter](screenshots/meterpreter_session.png)
+
+4.  **Persistencia:** Se instaló una puerta trasera (backdoor) para mantener el acceso al sistema, incluso después de un reinicio.
+
+5.  **Análisis de Defensa:** Se validó la funcionalidad del firewall y antivirus de Windows, que lograron bloquear los intentos posteriores de conexión, demostrando la importancia de las defensas.
+
+## 💡 Lecciones Aprendidas
+
+- El ciclo completo de un ataque ético, desde la identificación de una vulnerabilidad hasta la obtención de acceso.
+- La importancia de la persistencia y cómo se puede lograr en un sistema comprometido.
+- El rol fundamental del firewall y el antivirus como defensas activas.
+- La capacidad de automatizar tareas de hacking y defensa con scripting en Python.
+
+## 📂 Archivos del Repositorio
+
+- `auto_ping.py`: Script de Python para automatizar pruebas de conectividad.
+- `reporte.md`: Reporte profesional de los hallazgos del laboratorio.
+- `screenshots/`: Carpeta con capturas de pantalla de los puntos clave del proyecto.
+
+---
