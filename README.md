@@ -47,6 +47,6 @@ El laboratorio siguió una metodología de ataque estándar para simular un esce
 
 - `auto_ping.py`: Script de Python para automatizar pruebas de conectividad.
 - `reporte.md`: Reporte profesional de los hallazgos del laboratorio.
-- `screenshots/`: Carpeta con capturas de pantalla de los puntos clave del proyecto.
+
 
 ---
