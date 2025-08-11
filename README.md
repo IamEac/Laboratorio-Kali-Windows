@@ -22,15 +22,15 @@ El laboratorio siguió una metodología de ataque estándar para simular un esce
 
 1.  **Escaneo y Reconocimiento:** Se utilizó `Nmap` para identificar puertos abiertos en la máquina objetivo y determinar los servicios activos.
 
-    ![Escaneo Nmap](screenshots/nmap_scan.png)
+
 
 2.  **Detección de Tráfico:** Se analizó el tráfico con `Wireshark` para observar los paquetes del escaneo, demostrando que esta actividad de red es detectable.
 
-    ![Detección Wireshark](screenshots/wireshark_capture.png)
+
 
 3.  **Explotación Inicial:** A través de un ataque del lado del cliente, se ejecutó un payload malicioso para obtener una sesión `meterpreter` en la máquina Windows.
 
-    ![Sesión Meterpreter](screenshots/meterpreter_session.png)
+ 
 
 4.  **Persistencia:** Se instaló una puerta trasera (backdoor) para mantener el acceso al sistema, incluso después de un reinicio.
 
